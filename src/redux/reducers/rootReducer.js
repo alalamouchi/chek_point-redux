@@ -1,5 +1,5 @@
 import counterReducer from "./counter";
-import textReducer from "./textReducer";
+import toDoReducer from "./toDoReducer";
 import { combineReducers } from "redux";
 
-export const rootReducer = combineReducers({ counterReducer, textReducer });
+export const rootReducer = combineReducers({ toDoReducer });

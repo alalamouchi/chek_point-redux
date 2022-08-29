@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
 import { useDispatch, useSelector } from "react-redux";
 import { increase, decrease } from "../redux/actions/counterAction";
-import { changeText } from "../redux/actions/textActions";
 function Counter() {
     const dispatch = useDispatch();
     const counter = useSelector((state) => state.counterReducer.count);
@@ -17,10 +16,7 @@ function Counter() {
         // setCounter(counter - 1);
         dispatch(decrease());
     };
-    const handleChangeText = () => {
-        // setCounter(counter - 1);
-        dispatch(changeText());
-    };
+
     return (
         <div className="counter">
             <h1>{text}</h1>
@@ -43,15 +39,6 @@ function Counter() {
                     }}
                 >
                     -
-                </Button>
-                <Button
-                    style={{ fontSize: "1.5em ", width: "100px" }}
-                    variant="primary"
-                    onClick={() => {
-                        handleChangeText();
-                    }}
-                >
-                    Change text
                 </Button>
             </div>
         </div>

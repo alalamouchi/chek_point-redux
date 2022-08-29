@@ -1,7 +1,5 @@
 let initialState = {
     count: 0,
-    total: 0,
-    users: [],
 };
 
 const counterReducer = (state = initialState, action) => {
